@@ -19,6 +19,7 @@ use Slim\Middleware\RoutingMiddleware;
 use Slim\Psr7\Factory\ResponseFactory;
 use Slim\Routing\RouteCollector;
 use Slim\Routing\RouteResolver;
+use Twig\Environment;
 use UltraLite\Container\Container;
 
 class AppProvider implements ServiceProviderInterface
@@ -99,7 +100,7 @@ class AppProvider implements ServiceProviderInterface
          * Регистрируем обработчика ошибки 404
          */
         $container->set(NotFoundHandler::class, function (ContainerInterface $container) {
-            return new NotFoundHandler($container->get(ResponseFactoryInterface::class));
+            return new NotFoundHandler($container->get(ResponseFactoryInterface::class), $container->get(Environment::class));
         });
 
         /*

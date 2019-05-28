@@ -3,6 +3,7 @@
 
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
+use App\Provider\RenderProvider;
 use App\Support\ServiceProviderInterface;
 use App\Provider\AppProvider;
 use App\Support\Config;
@@ -24,6 +25,7 @@ $config = new Config(__DIR__ . DIRECTORY_SEPARATOR . 'config', $env, __DIR__);
  */
 $providers = [
     AppProvider::class,
+    RenderProvider::class,
 ];
 
 /*
