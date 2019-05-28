@@ -9,4 +9,13 @@ namespace PHPSTORM_META {
             '' => '@',
         ])
     );
+
+    override(
+        \App\Support\Config::get(0),
+        map([
+            'slim.debug'      => 'bool',
+            'templates.dir'   => 'string|false',
+            'templates.cache' => 'string|false',
+        ])
+    );
 }
