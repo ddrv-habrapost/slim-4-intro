@@ -5,7 +5,7 @@
     "slim/psr7": "~0.3",
     "ultra-lite/container": "^6.2",
     "symfony/console": "^4.2",
-    "twig/twig": "^2.10"
+    "twig/twig": "^3.11"
   },
   "autoload": {
     "psr-4": {
